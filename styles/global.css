@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "poppinsregular";
+  src: url("../fonts/Poppins/poppins-regular-webfont.woff2") format("woff2"),
+    url("../fonts/Poppins/poppins-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ------------------------------------------------------------- */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

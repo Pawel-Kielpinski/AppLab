@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppLab</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link
+      rel="stylesheet"
+      media="(max-width: 728.99px)"
+      href="./styles/mobile.css"
+    />
+    <link
+      rel="stylesheet"
+      media="(min-width: 729px) and (max-width: 1199.99px)"
+      href="./styles/tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="(min-width: 1200px)"
+      href="./styles/desktop.css"
+    />
+  </head>
+
+  <body class="body">
+    <header class="header">
+      <figure class="header__logo-inner">
+        <a class="header__logo-link" href="./index.html">
+          <img
+            class="header__logo-img"
+            src="./images/logo.png"
+            alt="Logo of AppLab"
+          />
+        </a>
+      </figure>
+
+      <nav class="header__nav">
+        <button
+          id="menu-toggle"
+          class="header__menu-toggle"
+          onclick="openMobileMenu()"
+        >
+          <div class="header__menu-icon">
+            <span class="header__menu-span header__menu-span--top"></span>
+            <span class="header__menu-span header__menu-span--middle"></span>
+            <span class="header__menu-span header__menu-span--bottom"></span>
+          </div>
+        </button>
+
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="./index.html">Home</a>
+          </li>
+
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="./index.html">Features</a>
+          </li>
+
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="./index.html">Pricing</a>
+          </li>
+
+          <li class="header__menu-item header__submenu">
+            <label
+              class="header__submenu-label header__submenu-label--blog"
+              for="submenu-blog"
+              data-arrow="header__submenu-label--blog-arrow"
+              data-blog="header__submenu-list--blog"
+              onclick="openMobileSubmenu(this.getAttribute('data-blog'))"
+              onmouseover="openDesktopSubmenu((this.getAttribute('data-blog')), (this.getAttribute('data-arrow')))"
+              >Blog
+              <span class="header__submenu-label--blog-arrow"
+                >&#8735;</span
+              ></label
+            >
+            <input
+              type="checkbox"
+              class="header__submenu-checkbox"
+              id="submenu-blog"
+            />
+
+            <ul class="header__submenu-list header__submenu-list--blog">
+              <li class="header__submenu-item">
+                <a class="header__submenu-link" href="./index.html">Blog 1</a>
+              </li>
+
+              <li class="header__submenu-item">
+                <a class="header__submenu-link" href="./index.html">Blog 2</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="header__menu-item header__submenu">
+            <label
+              class="header__submenu-label"
+              for="submenu-pages"
+              data-arrow="header__submenu-label--pages-arrow"
+              data-pages="header__submenu-list--pages"
+              onclick="openMobileSubmenu(this.getAttribute('data-pages'))"
+              onmouseover="openDesktopSubmenu((this.getAttribute('data-pages')), (this.getAttribute('data-arrow')))"
+              >Pages
+              <span class="header__submenu-label--pages-arrow"
+                >&#8735;</span
+              ></label
+            >
+            <input
+              type="checkbox"
+              class="header__submenu-checkbox"
+              id="submenu-pages"
+            />
+
+            <ul class="header__submenu-list header__submenu-list--pages">
+              <li class="header__submenu-item">
+                <a class="header__submenu-link" href="./index.html">Page 1</a>
+              </li>
+
+              <li class="header__submenu-item">
+                <a class="header__submenu-link" href="./index.html">Page 2</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="./index.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__download">
+        <button class="header__download-button">
+          <p class="header__download-text">Download</p>
+        </button>
+      </div>
+
+      <section class="section">
+        <article class="section__article">
+          <header class="section__article-header">
+            <h1 class="section__article-title">Promote Your App With Applab</h1>
+          </header>
+
+          <div class="section__article-content">
+            <p class="section__article-text">
+              Get more users to promote your app with this template
+            </p>
+          </div>
+
+          <div class="section__article-button">
+            <button class="section__article-button-inner">Get Start Now</button>
+          </div>
+        </article>
+
+        <figure class="section__figure">
+          <img
+            class="section__figure-img"
+            src="./images/phone.png"
+            alt="Next Gen Application"
+          />
+        </figure>
+      </section>
+    </header>
+
+    <main class="main">
+      <section class="benefits">
+        <header class="benefits-header">
+          <h1 class="benefits-header__title">Save your time to using applab</h1>
+        </header>
+
+        <ul class="benefits-options">
+          <li class="first-benefit">
+            <div class="first-benefit__container">
+              <figure class="first-benefit__container-img">
+                <img
+                  class="first-benefit__container-img-svg"
+                  src="./images/icons/eggs_on_plate.svg"
+                  alt="Manage team in One Place"
+                />
+              </figure>
+
+              <h2 class="first-benefit__container-description">
+                Manage&nbsp;team&nbsp;in<br />One&nbsp;Place
+              </h2>
+            </div>
+          </li>
+
+          <li class="second-benefit">
+            <div class="second-benefit__container">
+              <figure class="second-benefit__container-img">
+                <img
+                  class="second-benefit__container-img-svg"
+                  src="./images/icons/leaf.svg"
+                  alt="All-powerful Pointing has no control"
+                />
+              </figure>
+
+              <h2 class="second-benefit__container-description">
+                <span class="second-benefit__container-description-nowrap"
+                  >All-powerful</span
+                >&nbsp;Pointing<br />has&nbsp;no&nbsp;control
+              </h2>
+            </div>
+          </li>
+
+          <li class="third-benefit">
+            <div class="third-benefit__container">
+              <figure class="third-benefit__container-img">
+                <img
+                  class="third-benefit__container-img-svg"
+                  src="./images/icons/message_bubble.svg"
+                  alt="All-powerful Pointing has no control"
+                />
+              </figure>
+
+              <h2 class="third-benefit__container-description">
+                Establish&nbsp;a&nbsp;solid<br />online&nbsp;presence
+              </h2>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="features">
+        <article class="features-article">
+          <header class="features-header">
+            <h1 class="features-header-text">
+              Features that give you real feel
+            </h1>
+          </header>
+
+          <div class="features__description">
+            <p class="features__description-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud minim veniam sed do eiusmod
+              tempor
+            </p>
+          </div>
+
+          <div class="features__download">
+            <button class="features__download-button">Download Now</button>
+          </div>
+        </article>
+
+        <figure class="features-figure">
+          <img
+            class="features-figure__img"
+            src="./images/draw.png"
+            alt="Features that give you real feel"
+          />
+        </figure>
+      </section>
+
+      <section class="reviews">
+        <header class="reviews-header">
+          <h1 class="reviews-header__text">Review from our regular users</h1>
+        </header>
+
+        <div class="reviews-description">
+          <p class="reviews-description__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            alias voluptas illo quod, placeat doloremque blanditiis maiores
+            eligendi
+          </p>
+        </div>
+
+        <div class="reviews-rating">
+          <p class="reviews-rating__stars">
+            &#9733;&#9733;&#9733;&#9733;&#9733;
+          </p>
+          <p class="reviews-rating__person">&nbsp;- ROBERT SMILE</p>
+        </div>
+      </section>
+
+      <section class="pricing-plans">
+        <header class="prices-header">
+          <h1 class="prices-header__title">Unlock full Power</h1>
+          <h2 class="prices-header__subtitle">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem
+            ipsum dolor sit amet.
+          </h2>
+        </header>
+
+        <ul class="prices-options">
+          <li class="prices-options__variant prices-options__variant--basic">
+            <div class="prices-options__header">
+              <h3 class="prices-options__header-package">Basic</h3>
+              <h3 class="prices-options__header-price">$06</h3>
+            </div>
+
+            <ul class="prices-options__benefits-list">
+              <li class="prices-options__benefits-item">One User</li>
+              <li class="prices-options__benefits-item">1000 ui elements</li>
+              <li class="prices-options__benefits-item">Webmail Support</li>
+              <li class="prices-options__benefits-item">100GB Cloud Storage</li>
+            </ul>
+
+            <a class="prices-options__button" href="./index.html">Get Now</a>
+          </li>
+
+          <li class="prices-options__variant prices-options__variant--team">
+            <div class="prices-options__header prices-options__header--team">
+              <h3 class="prices-options__header-package">Team</h3>
+              <h3 class="prices-options__header-price prices-options__header-price--orange">$06</h3>
+            </div>
+
+            <ul
+              class="prices-options__benefits-list prices-options__benefits-list--team"
+            >
+              <li class="prices-options__benefits-item">One User</li>
+              <li class="prices-options__benefits-item">1000 ui elements</li>
+              <li class="prices-options__benefits-item">Webmail Support</li>
+              <li class="prices-options__benefits-item">100GB Cloud Storage</li>
+              <li class="prices-options__benefits-item">
+                Unlimited Users Limit
+              </li>
+            </ul>
+
+            <a
+              class="prices-options__button prices-options__button--team"
+              href="./index.html"
+              >Get Now</a
+            >
+          </li>
+
+          <li class="prices-options__variant prices-options__variant--business">
+            <div
+              class="prices-options__header prices-options__header--business"
+            >
+              <h3 class="prices-options__header-package">Business</h3>
+              <h3 class="prices-options__header-price prices-options__header-price--green">$06</h3>
+            </div>
+
+            <ul class="prices-options__benefits-list">
+              <li class="prices-options__benefits-item">One User</li>
+              <li class="prices-options__benefits-item">1000 ui elements</li>
+              <li class="prices-options__benefits-item">Webmail Support</li>
+              <li class="prices-options__benefits-item">100GB Cloud Storage</li>
+            </ul>
+
+            <a class="prices-options__button" href="./index.html">Get Now</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="app-stores">
+        <div class="app-stores__title">
+          <h2 class="app-stores__title-text">
+            Get start from now<br />and increase productivity
+          </h2>
+        </div>
+
+        <div class="app-stores__links">
+          <figure class="app-stores__links-apple">
+            <a href="https://www.apple.com/pl/app-store/">
+              <img
+                class="app-stores__links-apple-img"
+                src="./images/app-store.svg"
+                alt="App Store Website"
+              />
+            </a>
+          </figure>
+
+          <figure class="app-stores__links-google">
+            <a href="https://play.google.com/store/games?hl=pl&gl=US">
+              <img
+                class="app-stores__links-google-img"
+                src="./images/google-play.svg"
+                alt="Google Play Website"
+            /></a>
+          </figure>
+        </div>
+      </div>
+
+      <div class="link-block">
+        <div class="link-block__header">
+          <h2 class="link-block__header-title">AppLab</h2>
+          <p class="link-block__header-subtitle">
+            Firmament morning sixth subdue darkness creeping gathered divide.
+          </p>
+        </div>
+
+        <div class="link-block__app">
+          <figure class="link-block__app-facebook">
+            <a
+              class="link-block__app-facebook-link"
+              href="https://www.facebook.com/"
+            >
+              <img
+                class="link-block__app-facebook-link-img"
+                src="./images/facebook2.svg"
+                alt="Official Facebook account"
+              />
+            </a>
+          </figure>
+
+          <figure class="link-block__app-twitter">
+            <a class="link-block__app-twitter-link" href="https://twitter.com/">
+              <img
+                class="link-block__app-twitter-link-img"
+                src="./images/twitter.svg"
+                alt="Official Twetter account"
+              />
+            </a>
+          </figure>
+
+          <figure class="link-block__app-instagram">
+            <a
+              class="link-block__app-instagram-link"
+              href="https://www.instagram.com/"
+            >
+              <img
+                class="link-block__app-instagram-link-img"
+                src="./images/instagram.svg"
+                alt="Official Instagram account"
+              />
+            </a>
+          </figure>
+        </div>
+
+        <div class="link-block__services">
+          <div class="link-block__services-title">
+            <h3 class="link-block__services-title-text">Services</h3>
+          </div>
+
+          <div class="link-block__services-links">
+            <ul class="link-block__services-links-list">
+              <li class="link-block__services-links-list-item">
+                <a
+                  class="link-block__services-links-list-item-link"
+                  href="./index.html"
+                >
+                  Team management</a
+                >
+              </li>
+              <li class="link-block__services-links-list-item">
+                <a
+                  class="link-block__services-links-list-item-link"
+                  href="./index.html"
+                  >Collaboration</a
+                >
+              </li>
+              <li class="link-block__services-links-list-item">
+                <a
+                  class="link-block__services-links-list-item-link"
+                  href="./index.html"
+                  >Todo</a
+                >
+              </li>
+              <li class="link-block__services-links-list-item">
+                <a
+                  class="link-block__services-links-list-item-link"
+                  href="./index.html"
+                  >Events</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="link-block__useful">
+          <div class="link-block__useful-title">
+            <h3 class="link-block__useful-title-text">Useful Links</h3>
+          </div>
+
+          <div class="link-block__useful-links">
+            <ul class="link-block__useful-links-list">
+              <li class="link-block__useful-links-list-item">
+                <a
+                  class="link-block__useful-links-list-item-link"
+                  href="./index.html"
+                >
+                  Pricing</a
+                >
+              </li>
+
+              <li class="link-block__useful-links-list-item">
+                <a
+                  class="link-block__useful-links-list-item-link"
+                  href="./index.html"
+                >
+                  Features</a
+                >
+              </li>
+
+              <li class="link-block__useful-links-list-item">
+                <a
+                  class="link-block__useful-links-list-item-link"
+                  href="./index.html"
+                >
+                  Blog</a
+                >
+              </li>
+              <li class="link-block__useful-links-list-item">
+                <a
+                  class="link-block__useful-links-list-item-link"
+                  href="./index.html"
+                >
+                  Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="link-block__downloads">
+          <div class="link-block__downloads-title">
+            <h3 class="link-block__downloads-title-text">Downloads</h3>
+          </div>
+
+          <div class="link-block__downloads-links">
+            <ul class="link-block__downloads-links-list">
+              <li class="link-block__downloads-links-list-item">
+                <a
+                  class="link-block__downloads-links-list-item-link"
+                  href="./index.html"
+                >
+                  Download from Apple Store</a
+                >
+              </li>
+              <li class="link-block__downloads-links-list-item">
+                <a
+                  class="link-block__downloads-links-list-item-link"
+                  href="./index.html"
+                  >Download from Play Store</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p class="copyright__text">
+          Copyright &#169;2020 All rights reserved | This template is made with
+          &#9825; by
+          <a class="footer-copyright__text--blue" href="https://colorlib.com/"
+            >Colorlib</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
